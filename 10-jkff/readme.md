@@ -8,4 +8,4 @@ https://www.geeksforgeeks.org/what-is-jk-flip-flop/
 
 ## Output
 
-![jkff out](./assets/output.png "jkff Output")
+![jkff out](./assets/output.png "Jkff Output")
