@@ -8,4 +8,4 @@ https://www.geeksforgeeks.org/ring-counter-in-digital-logic/
 
 ## Output
 
-![tff out](./assets/output.png "tff Output")
+![ring ctr out](./assets/output.png "ring ctr Output")
