@@ -7,7 +7,7 @@ def is_valid_directory_name(name: str) -> bool:
     # The name cannot contain the following characters: \ / : * ? " < > |
     return not bool(re.search(r'[\\/:*?"<>|]', name))
 
-def create_directory_with_files(directory_name: str):
+def create_directory_with_files(directory_name: str, eda_link: str):
     if not is_valid_directory_name(directory_name):
         print(f"'{directory_name}' is not a valid directory name.")
         return
@@ -17,6 +17,7 @@ def create_directory_with_files(directory_name: str):
         print(f"Directory '{directory_name}' created successfully.")
         
         # Define the file paths
+        readme_file = os.path.join(directory_name, "readme.md")
         design_file = os.path.join(directory_name, "design.sv")
         testbench_file = os.path.join(directory_name, "testbench.sv")
         run_script = os.path.join(directory_name, "run.sh")
@@ -28,6 +29,10 @@ def create_directory_with_files(directory_name: str):
         with open(testbench_file, 'w') as tb_file:
             tb_file.write('`include "./design.sv"\n')
             tb_file.write('`timescale 1ns/1ns\n')
+
+        with open(readme_file, 'w') as rf:
+            rf.write('## EDA Playground \n\n')
+            rf.write(f'{eda_link}\n')
         
         # Create the run.sh file with sample commands
         with open(run_script, 'w') as script_file:
@@ -50,4 +55,5 @@ gtkwave ./dump.vcd \n""")
 
 if __name__ == "__main__":
     directory_name = input("Enter a directory name: ")
-    create_directory_with_files(directory_name)
+    eda_link = input("Enter EDA playground link: ")
+    create_directory_with_files(directory_name, eda_link)

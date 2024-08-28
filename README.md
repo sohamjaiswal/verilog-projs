@@ -2,7 +2,7 @@
 
 This repository contains code for some undergraduate-level/beginner Verilog projects.
 
-## Pre-Requisites
+## Local Running Pre-Requisites
 
 - On Linux
   - Installation of
