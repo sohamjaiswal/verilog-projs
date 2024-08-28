@@ -4,6 +4,8 @@ This repository contains code for some undergraduate-level/beginner Verilog proj
 
 Each folder contains a readme file with a link to the relevant EDA Playground for viewers who do not wish to run the project locally.
 
+> Note: EDA Playground takes away a lot of inner workings of the process of making verilog programs, and although complicated programs can still be made in it, running locally would always open more creativity possibilities for programmers.
+
 ## Local Running Pre-Requisites
 
 - On Linux
