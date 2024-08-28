@@ -12,7 +12,7 @@ This repository contains code for some undergraduate-level/beginner Verilog proj
   - Installation of
     - Icarus Verilog (Brew Installer should work)
     - GTKWave
-      - Use `brew install --HEAD randomplum/gtkwave/gtkwave` brew listing doesn't work
+      - Use `brew install --HEAD randomplum/gtkwave/gtkwave && brew link gtkwave` brew listing doesn't work
 - Windows
   - Installation of
     - Icarus Verilog
