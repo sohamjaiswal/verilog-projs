@@ -2,21 +2,24 @@
 
 This repository contains code for some undergraduate-level/beginner Verilog projects.
 
+Each folder contains a readme file with a link to the relevant EDA Playground for viewers who do not wish to run the project locally.
+
 ## Local Running Pre-Requisites
 
 - On Linux
   - Installation of
-    - Icarus Verilog
-    - GTKWave
+    - Icarus Verilog (use OS shipped package manager or compile)
+    - GTKWave (use OS shipped package manager or compile)
 - MacOS
+  - Install HomeBrew from https://brew.sh/
   - Installation of
-    - Icarus Verilog (Brew Installer should work)
+    - Icarus Verilog `brew install icarus-verilog`
     - GTKWave
       - Use `brew install --HEAD randomplum/gtkwave/gtkwave && brew link gtkwave` brew listing doesn't work
 - Windows
   - Installation of
-    - Icarus Verilog
-    - GTKWave
+    - Icarus Verilog from https://bleyer.org/icarus/
+    - GTKWave from https://gtkwave.sourceforge.net/
 
 ## Running
 
