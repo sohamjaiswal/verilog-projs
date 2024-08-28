@@ -34,3 +34,7 @@ On Windows
 
 1. Create dump using Icarus Verilog.
 2. Open dump in GTKWave.
+
+## Project
+
+Sample project showcasing a simple demo with a few moving parts together to make something that can be considered complicated at first sight.
