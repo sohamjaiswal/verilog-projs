@@ -1,0 +1,3 @@
+[submodule "15-project"]
+	path = 15-project
+	url = git@sj10.github.com:sohamjaiswal/vga-verilog.git
