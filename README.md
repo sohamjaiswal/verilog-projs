@@ -1,5 +1,7 @@
 # Verilog Projs
 
+![banner](./assets/banner.png "banner")
+
 This repository contains code for some undergraduate-level/beginner Verilog projects.
 
 Each folder contains a readme file with a link to the relevant EDA Playground for viewers who do not wish to run the project locally.
