@@ -1,0 +1,173 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x12b004180 .scope module, "allTb" "allTb" 2 6;
+ .timescale -9 -9;
+v0x12b014fd0_0 .var "a1", 0 0;
+v0x12b015060_0 .net "andOut1", 0 0, L_0x12b0158b0;  1 drivers
+v0x12b0150f0_0 .var "b1", 0 0;
+v0x12b015180_0 .net "nandOut1", 0 0, L_0x12b0156d0;  1 drivers
+v0x12b015230_0 .net "norOut1", 0 0, L_0x12b015960;  1 drivers
+v0x12b015300_0 .net "notOut1", 0 0, L_0x12b015b50;  1 drivers
+v0x12b0153b0_0 .net "orOut1", 0 0, L_0x12b015c40;  1 drivers
+v0x12b015460_0 .net "xnorOut1", 0 0, L_0x12b0157c0;  1 drivers
+v0x12b015510_0 .net "xorOut1", 0 0, L_0x12b015620;  1 drivers
+S_0x12b004480 .scope module, "xorTb" "allGates" 2 10, 3 3 0, S_0x12b004180;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "xorOut";
+    .port_info 3 /OUTPUT 1 "xnorOut";
+    .port_info 4 /OUTPUT 1 "andOut";
+    .port_info 5 /OUTPUT 1 "nandOut";
+    .port_info 6 /OUTPUT 1 "notOut";
+    .port_info 7 /OUTPUT 1 "orOut";
+    .port_info 8 /OUTPUT 1 "norOut";
+L_0x12b015620 .functor XOR 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<0>, C4<0>;
+L_0x12b015750 .functor XOR 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<0>, C4<0>;
+L_0x12b0157c0 .functor NOT 1, L_0x12b015750, C4<0>, C4<0>, C4<0>;
+L_0x12b0158b0 .functor AND 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<1>, C4<1>;
+L_0x12b015a60 .functor AND 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<1>, C4<1>;
+L_0x12b0156d0 .functor NOT 1, L_0x12b015a60, C4<0>, C4<0>, C4<0>;
+L_0x12b015b50 .functor NOT 1, v0x12b014fd0_0, C4<0>, C4<0>, C4<0>;
+L_0x12b015c40 .functor OR 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<0>, C4<0>;
+L_0x12b015cf0 .functor OR 1, v0x12b014fd0_0, v0x12b0150f0_0, C4<0>, C4<0>;
+L_0x12b015960 .functor NOT 1, L_0x12b015cf0, C4<0>, C4<0>, C4<0>;
+v0x12b0046d0_0 .net *"_ivl_16", 0 0, L_0x12b015cf0;  1 drivers
+v0x12b014760_0 .net *"_ivl_2", 0 0, L_0x12b015750;  1 drivers
+v0x12b014800_0 .net *"_ivl_8", 0 0, L_0x12b015a60;  1 drivers
+v0x12b0148b0_0 .net "a", 0 0, v0x12b014fd0_0;  1 drivers
+v0x12b014950_0 .net "andOut", 0 0, L_0x12b0158b0;  alias, 1 drivers
+v0x12b014a30_0 .net "b", 0 0, v0x12b0150f0_0;  1 drivers
+v0x12b014ad0_0 .net "nandOut", 0 0, L_0x12b0156d0;  alias, 1 drivers
+v0x12b014b70_0 .net "norOut", 0 0, L_0x12b015960;  alias, 1 drivers
+v0x12b014c10_0 .net "notOut", 0 0, L_0x12b015b50;  alias, 1 drivers
+v0x12b014d20_0 .net "orOut", 0 0, L_0x12b015c40;  alias, 1 drivers
+v0x12b014db0_0 .net "xnorOut", 0 0, L_0x12b0157c0;  alias, 1 drivers
+v0x12b014e50_0 .net "xorOut", 0 0, L_0x12b015620;  alias, 1 drivers
+    .scope S_0x12b004180;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000001 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12b014fd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12b0150f0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 16 "$display", "Settings Vars to: \012 a1:%b,b1:%b", v0x12b014fd0_0, v0x12b0150f0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 18 "$display", "XOR Output:%b", v0x12b015510_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 20 "$display", "XNOR Output:%b", v0x12b015460_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 22 "$display", "AND Output:%b", v0x12b015060_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 24 "$display", "NAND Output:%b", v0x12b015180_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 26 "$display", "NOT Output:%b", v0x12b015300_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 28 "$display", "OR Output:%b", v0x12b0153b0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 30 "$display", "NOR Output:%b", v0x12b015230_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12b014fd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12b0150f0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 32 "$display", "Settings Vars to: \012 a1:%b,b1:%b", v0x12b014fd0_0, v0x12b0150f0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 34 "$display", "XOR Output:%b", v0x12b015510_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 36 "$display", "XNOR Output:%b", v0x12b015460_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 38 "$display", "AND Output:%b", v0x12b015060_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 40 "$display", "NAND Output:%b", v0x12b015180_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 42 "$display", "NOT Output:%b", v0x12b015300_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 44 "$display", "OR Output:%b", v0x12b0153b0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 46 "$display", "NOR Output:%b", v0x12b015230_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12b014fd0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x12b0150f0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 48 "$display", "Settings Vars to: \012 a1:%b,b1:%b", v0x12b014fd0_0, v0x12b0150f0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 50 "$display", "XOR Output:%b", v0x12b015510_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 52 "$display", "XNOR Output:%b", v0x12b015460_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 54 "$display", "AND Output:%b", v0x12b015060_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 56 "$display", "NAND Output:%b", v0x12b015180_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 58 "$display", "NOT Output:%b", v0x12b015300_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 60 "$display", "OR Output:%b", v0x12b0153b0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 62 "$display", "NOR Output:%b", v0x12b015230_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12b014fd0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x12b0150f0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 64 "$display", "Settings Vars to: \012 a1:%b,b1:%b", v0x12b014fd0_0, v0x12b0150f0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 66 "$display", "XOR Output:%b", v0x12b015510_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 68 "$display", "XNOR Output:%b", v0x12b015460_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 70 "$display", "AND Output:%b", v0x12b015060_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 72 "$display", "NAND Output:%b", v0x12b015180_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 74 "$display", "NOT Output:%b", v0x12b015300_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 76 "$display", "OR Output:%b", v0x12b0153b0_0 {0 0 0};
+    %delay 2, 0;
+    %delay 1, 0;
+    %vpi_call 2 78 "$display", "NOR Output:%b", v0x12b015230_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "./testbench.sv";
+    "././design.sv";
