@@ -1,0 +1,53 @@
+$date
+	Wed Aug 28 15:05:54 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module allTb $end
+$var wire 1 ! xorOut1 $end
+$var wire 1 " xnorOut1 $end
+$var wire 1 # orOut1 $end
+$var wire 1 $ notOut1 $end
+$var wire 1 % norOut1 $end
+$var wire 1 & nandOut1 $end
+$var wire 1 ' andOut1 $end
+$var reg 1 ( a1 $end
+$var reg 1 ) b1 $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0)
+0(
+0'
+1&
+1%
+1$
+0#
+1"
+0!
+$end
+#22
+0"
+0%
+1!
+1#
+1)
+#44
+0$
+0)
+1(
+#66
+1"
+0&
+0!
+1'
+1)
+#88
